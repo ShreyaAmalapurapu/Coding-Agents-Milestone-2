@@ -84,7 +84,7 @@ fi
 # which becomes mini-swe-agent's --cost-limit; callers may not override it (rejected below).
 # Cost is mini-swe-agent's estimate from the config's per-token prices, checked before each
 # model call, so the final call can overshoot the cap slightly.
-COST_LIMIT_USD=3
+COST_LIMIT_USD=5
 
 # Pull --platform/--model/--config-file out of the remaining args; everything
 # else passes straight through to harbor untouched.
