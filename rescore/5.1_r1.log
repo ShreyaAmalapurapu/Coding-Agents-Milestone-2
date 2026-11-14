@@ -1,0 +1,96 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+FAIL 39 /archive and /unarchive by the owner: 201, message null, channel.is_archived true then false; posts 423 while archived: archive 201 1, post 423, unarchive 201 0, post 201
+RESULT: 10 passed, 1 failed
+=== C /spec/features/checks/check_features_5.sh
+FAIL 50 @group-handle mentions group members who are in the channel, minus the author: status 201, mentions ['17', '18', '19']
+FAIL 51 mentions from @group, @username and @channel are deduplicated and never include the author: group+user: 201 ['17', '18', '19']; @channel+group+user: 201 ['15', '17', '18', '19'] (want every channel member but the author, once)
+RESULT: 12 passed, 2 failed
+SCORE C 53 3
+=== D /spec/cluster/checks/check_cluster_1.sh
+RESULT: 5 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+RESULT: 7 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+RESULT: 6 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+RESULT: 3 passed, 0 failed
+SCORE D 21 0
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+FAIL 27 every always-present data-testid is in the initial HTML: missing ['auth-form', 'auth-submit', 'auth-toggle', 'workspace-create-form', 'empty-state-create-workspace', 'join-workspace-form', 'join-workspace-submit', 'channel-list', 'dms-list', 'new-channel-btn', 'current-user', 'logout-btn', 'workspace-header', 'workspace-settings-btn', 'workspace-settings-close', 'workspace-name-input', 'workspace-join-mode', 'workspace-general-submit', 'channel-title', 'channel-topic', 'channel-settings-btn', 'channel-settings-title', 'channel-settings-close', 'channel-members-list', 'channel-add-member-form', 'channel-add-member-input', 'channel-add-member-submit', 'channel-topic-input', 'channel-topic-submit', 'archive-channel-btn', 'unarchive-channel-btn', 'create-channel-form', 'create-channel-private', 'create-channel-submit', 'create-channel-cancel', 'message-list', 'message-input', 'send-btn', 'thread-panel', 'settings-tab-members', 'settings-tab-invitations', 'settings-tab-general', 'settings-pane-members', 'settings-pane-invitations', 'settings-pane-general', 'create-invitation-btn', 'create-invitation-form', 'create-invitation-submit', 'invitations-list']
+FAIL 28 the DOM ids auth-modal, create-channel-modal, channel-settings-modal, workspace-settings-modal, create-invitation-form are present: missing ['auth-modal', 'create-channel-modal', 'channel-settings-modal', 'workspace-settings-modal', 'create-invitation-form']
+FAIL 29 each pinned button carries the right data-button-role on the same element as its data-testid: wrong or missing for ['auth-submit', 'send-btn', 'thread-send', 'create-channel-submit', 'join-workspace-submit', 'workspace-general-submit', 'create-invitation-submit', 'channel-topic-submit', 'channel-add-member-submit', 'archive-channel-btn', 'logout-btn', 'new-channel-btn', 'create-invitation-btn', 'unarchive-channel-btn', 'create-channel-cancel', 'close-thread', 'channel-settings-close', 'workspace-settings-close', 'channel-settings-btn', 'workspace-settings-btn']
+RESULT: 2 passed, 3 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+FAIL 31 check stopped (list index out of range)
+FAIL 32 check stopped (list index out of range)
+FAIL 33 check stopped (list index out of range)
+FAIL 34 check stopped (list index out of range)
+FAIL 35 check stopped (list index out of range)
+FAIL 36 check stopped (list index out of range)
+FAIL 37 check stopped (list index out of range)
+RESULT: 0 passed, 7 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 40 open-thread-btn opens thread-panel on the right; a reply sent there shows in it, is saved, and the parent shows 1 reply: panel True (right of messages False), reply shown True, reply-count True, API replies ['reply in ui 6af74c3dc61']
+RESULT: 7 passed, 1 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 47 join-workspace-form with a bad code shows the error text in join-workspace-error: visible False, text ''
+FAIL 48 browser step failed: Page.fill: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"create-channel-form\"] input[name=\"name\"]"): no element matches)
+FAIL 49 browser step failed: Page.fill: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"create-channel-form\"] input[name=\"name\"]"): no element matches)
+FAIL 50 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"channel-entry\"][data-channel-name=\"planning\"]"): no element matches)
+FAIL 51 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"workspace-settings-btn\"]"): no element matches)
+FAIL 52 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"auth-toggle\"]"): it exists but is not visible; hover toolbars must show on mouse hover)
+RESULT: 2 passed, 6 failed
+SCORE E 36 17
+=== A /spec/roles/checks/check_roles_1.sh
+FAIL 2 duplicate username: expected 409, got 201
+RESULT: 20 passed, 1 failed
+=== A /spec/roles/checks/check_roles_2.sh
+RESULT: 23 passed, 0 failed
+=== A /spec/roles/checks/check_roles_3.sh
+RESULT: 26 passed, 0 failed
+=== A /spec/roles/checks/check_roles_4.sh
+RESULT: 6 passed, 0 failed
+SCORE A 75 1
+=== B /spec/channels/checks/check_channels_1.sh
+FAIL 1 create returns 201 and a full channel with defaults: status 201, channel {"id": 60, "workspace_id": 26, "name": "alpha", "is_private": 0, "is_dm": 0, "topic": "", "is_archived": 0}
+FAIL 7 archived channels are hidden by default and shown with include_archived: default False, =1 False, =true False
+FAIL 8 topic update: member 200, owner 200, other member 403, too long 400: got 200/from member/403/None/403/400
+FAIL 12 archive/unarchive are owner-only: x archive 403, owner archive 200/1, x unarchive 403
+RESULT: 11 passed, 4 failed
+=== B /spec/channels/checks/check_channels_2.sh
+FAIL 21 a message posted between pages does not shift page 2: status 200, bodies ['m4', 'm3']
+FAIL 23 limit out of range returns 400, limit=200 is accepted: got [400, 400, 400, 0, 200]
+FAIL 26 search finds matches newest first and hides private channels: owner got ['second zq6af74c77372', 'first zq6af74c77372'], other member got ['second zq6af74c77372', 'first zq6af74c77372']
+FAIL 27 workspace_id limits search to one workspace: workspace 1 results ['ws2 zq6af74c77372', 'second zq6af74c77372', 'first zq6af74c77372'], workspace 2 results ['ws2 zq6af74c77372', 'second zq6af74c77372', 'first zq6af74c77372']
+RESULT: 20 passed, 4 failed
+=== B /spec/channels/checks/check_channels_3.sh
+RESULT: 10 passed, 0 failed
+=== B /spec/channels/checks/check_channels_4.sh
+FAIL 59 marking read to the head makes unread_count 0, and one new message makes it 1: after marking read 1, after one new message 2
+RESULT: 16 passed, 1 failed
+SCORE B 57 9
+=== REG
+REGRESSION FAIL roles 2 duplicate username: expected 409, got 201
+REGRESSION FAIL channels 1 create returns 201 and a full channel with defaults: status 201, channel {"id": 152, "workspace_id": 38, "name": "alpha", "is_private": 0, "is_dm": 0, "topic": "", "is_archived": 0}
+REGRESSION FAIL channels 7 archived channels are hidden by default and shown with include_archived: default False, =1 False, =true False
+REGRESSION FAIL channels 8 topic update: member 200, owner 200, other member 403, too long 400: got 200/from member/403/None/403/400
+REGRESSION FAIL channels 12 archive/unarchive are owner-only: x archive 403, owner archive 200/1, x unarchive 403
+REGRESSION FAIL channels 21 a message posted between pages does not shift page 2: status 200, bodies ['m4', 'm3']
+REGRESSION FAIL channels 23 limit out of range returns 400, limit=200 is accepted: got [400, 400, 400, 0, 200]
+REGRESSION FAIL channels 26 search finds matches newest first and hides private channels: owner got ['second zq6af74c83907', 'first zq6af74c83907'], other member got ['second zq6af74c83907', 'first zq6af74c83907']
+REGRESSION FAIL channels 27 workspace_id limits search to one workspace: workspace 1 results ['ws2 zq6af74c83907', 'second zq6af74c83907', 'first zq6af74c83907'], workspace 2 results ['ws2 zq6af74c83907', 'second zq6af74c83907', 'first zq6af74c83907']
+REGRESSION FAIL channels 59 marking read to the head makes unread_count 0, and one new message makes it 1: after marking read 1, after one new message 2
+REGRESSION: 10 broken
+SCORE REG 10

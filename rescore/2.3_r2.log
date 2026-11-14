@@ -1,0 +1,16 @@
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+RESULT: 7 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 50 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"channel-settings-close\"]"): it exists but is not visible; hover toolbars must show on mouse hover)
+RESULT: 7 passed, 1 failed
+SCORE E 52 1

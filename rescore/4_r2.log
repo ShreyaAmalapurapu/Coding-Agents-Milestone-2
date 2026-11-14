@@ -1,0 +1,45 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+RESULT: 11 passed, 0 failed
+=== C /spec/features/checks/check_features_5.sh
+FAIL 55 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 56 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+RESULT: 12 passed, 2 failed
+SCORE C 54 2
+=== D /spec/cluster/checks/check_cluster_1.sh
+FAIL 4 30 concurrent posts across the 3 nodes all return 201 and give 30 consecutive event_ids, no gaps or repeats: statuses [0, 201], 14 frames, ids [2]..[15] (want 2..31)
+RESULT: 4 passed, 1 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+FAIL 12 not reached: the check's time budget ran out (the cluster was slow or did not come back)
+RESULT: 6 passed, 1 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+FAIL 18 not reached: the check's time budget ran out (the cluster was slow or did not come back)
+RESULT: 5 passed, 1 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+FAIL 19 not reached: the check's time budget ran out (the cluster was slow or did not come back)
+FAIL 20 not reached: the check's time budget ran out (the cluster was slow or did not come back)
+FAIL 21 not reached: the check's time budget ran out (the cluster was slow or did not come back)
+RESULT: 0 passed, 3 failed
+SCORE D 15 6
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+RESULT: 7 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 52 browser step failed: Page.get_attribute: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"auth-form\"]"): no element matches)
+FAIL 53 browser step failed: Locator.bounding_box: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"channel-list\"]"): no element matches)
+RESULT: 6 passed, 2 failed
+SCORE E 51 2

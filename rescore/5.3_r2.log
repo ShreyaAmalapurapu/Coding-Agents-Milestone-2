@@ -1,0 +1,53 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+RESULT: 11 passed, 0 failed
+=== C /spec/features/checks/check_features_5.sh
+RESULT: 14 passed, 0 failed
+SCORE C 56 0
+=== D /spec/cluster/checks/check_cluster_1.sh
+RESULT: 5 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+RESULT: 7 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+RESULT: 6 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+RESULT: 3 passed, 0 failed
+SCORE D 21 0
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+RESULT: 7 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+RESULT: 8 passed, 0 failed
+SCORE E 53 0
+=== A /spec/roles/checks/check_roles_1.sh
+RESULT: 21 passed, 0 failed
+=== A /spec/roles/checks/check_roles_2.sh
+RESULT: 23 passed, 0 failed
+=== A /spec/roles/checks/check_roles_3.sh
+RESULT: 26 passed, 0 failed
+=== A /spec/roles/checks/check_roles_4.sh
+RESULT: 6 passed, 0 failed
+SCORE A 76 0
+=== B /spec/channels/checks/check_channels_1.sh
+RESULT: 15 passed, 0 failed
+=== B /spec/channels/checks/check_channels_2.sh
+RESULT: 24 passed, 0 failed
+=== B /spec/channels/checks/check_channels_3.sh
+RESULT: 10 passed, 0 failed
+=== B /spec/channels/checks/check_channels_4.sh
+RESULT: 17 passed, 0 failed
+SCORE B 66 0

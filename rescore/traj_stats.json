@@ -1,0 +1,178 @@
+{
+ "1.1_r1": {
+  "exit": "Submitted",
+  "cmds": 106,
+  "checks": 45,
+  "skips": 5,
+  "cost": 1.1154,
+  "last_status": "<returncode>0</returncode>\n<output>\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 4 5. If time is left, go back to each with: bash /spec/step.sh <#>\n  1. Features.1     PASSED      (7 runs)  bash /spec/features/checks/check_features_1.sh\n  2. Features.2     PASSED      (9 runs)  bash /spec/features/checks/check_features_2.sh\n  3. Features.3     PASSED      (6 runs)  bash /spec/features/checks/check_features_3.sh\n  4. Features.4     SKIPPED     (9 runs)  bash /spec/features/checks/check_features_4.sh\n  5. Features.5     SKIPPED     (9 runs)  bash /spec/features/checks/check_features_5.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 4 5. If time is left, go back to each with: bash /spec/step.sh <#>\n</output>"
+ },
+ "1.1_r2": {
+  "exit": "Submitted",
+  "cmds": 132,
+  "checks": 69,
+  "skips": 2,
+  "cost": 1.8132,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Features.1     PASSED      (4 runs)  bash /spec/features/checks/check_features_1.sh\n  2. Features.2     PASSED      (4 runs)  bash /spec/features/checks/check_features_2.sh\n  3. Features.3     PASSED      (5 runs)  bash /spec/features/checks/check_features_3.sh\n  4. Features.4     SKIPPED     (11 runs)  bash /spec/features/checks/check_features_4.sh\n  5. Features.5     SKIPPED     (14 runs)  bash /spec/features/checks/check_features_5.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 4 5. If time is left, go back to each with: bash /spec/step.sh <#>\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n</output>"
+ },
+ "1.2_r1": {
+  "exit": "Submitted",
+  "cmds": 31,
+  "checks": 12,
+  "skips": 3,
+  "cost": 0.1526,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Cluster.1      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      SKIPPED     (9 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 2. If time is left, go back to each with: bash /spec/step.sh <#>\n</output>"
+ },
+ "1.2_r2": {
+  "exit": "Submitted",
+  "cmds": 38,
+  "checks": 9,
+  "skips": 0,
+  "cost": 0.2073,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Cluster.1      PASSED      (5 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n-rw-r--r-- 1 root root    28 Nov 13 01:20 /app/requirements.txt\n-rw-r--r-- 1 root root 13970 Nov 13 01:24 /app/server.py\n-rwxr-xr-x 1 root root   768 Nov 13 01:21 /app/start.sh\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\ninvalid websocket rejected: 401\n</output>"
+ },
+ "1.3_r1": {
+  "exit": "Submitted",
+  "cmds": 113,
+  "checks": 50,
+  "skips": 7,
+  "cost": 1.4414,
+  "last_status": "<returncode>0</returncode>\n<output>\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n  1. IrcUi.1        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n  2. IrcUi.2        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n  3. IrcUi.3        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n  4. IrcUi.4        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n  5. IrcUi.5        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n  6. IrcUi.6        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n  7. IrcUi.7        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 1 2 3 5 6 7. If time is left, go back to each with: bash /spec/step.sh <#>\n</output>"
+ },
+ "1.3_r2": {
+  "exit": "Submitted",
+  "cmds": 119,
+  "checks": 52,
+  "skips": 6,
+  "cost": 1.3672,
+  "last_status": "<returncode>0</returncode>\n<output>\nRemaining time (hours:minutes):\n0:33\n  1. IrcUi.1        PASSED      (5 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n  2. IrcUi.2        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n  3. IrcUi.3        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n  4. IrcUi.4        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n  5. IrcUi.5        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n  6. IrcUi.6        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n  7. IrcUi.7        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 2 3 5 6 7. If time is left, go back to each with: bash /spec/step.sh <#>\n</output>"
+ },
+ "2.1_r1": {
+  "exit": "Submitted",
+  "cmds": 72,
+  "checks": 19,
+  "skips": 0,
+  "cost": 0.5499,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Features.1     PASSED      (4 runs)  bash /spec/features/checks/check_features_1.sh\n  2. Features.2     PASSED      (1 runs)  bash /spec/features/checks/check_features_2.sh\n  3. Features.3     PASSED      (1 runs)  bash /spec/features/checks/check_features_3.sh\n  4. Features.4     PASSED      (6 runs)  bash /spec/features/checks/check_features_4.sh\n  5. Features.5     PASSED      (6 runs)  bash /spec/features/checks/check_features_5.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n</output>"
+ },
+ "2.1_r2": {
+  "exit": "Submitted",
+  "cmds": 125,
+  "checks": 35,
+  "skips": 0,
+  "cost": 1.4527,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Features.1     PASSED      (3 runs)  bash /spec/features/checks/check_features_1.sh\n  2. Features.2     PASSED      (1 runs)  bash /spec/features/checks/check_features_2.sh\n  3. Features.3     PASSED      (2 runs)  bash /spec/features/checks/check_features_3.sh\n  4. Features.4     PASSED      (3 runs)  bash /spec/features/checks/check_features_4.sh\n  5. Features.5     PASSED      (9 runs)  bash /spec/features/checks/check_features_5.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n-rw-r--r-- 1 root root 27238 Nov 13 02:36 /app/app.py\n-rw-r--r-- 1 root root    13 Nov 13 02:21 /app/requirements.txt\n-rwxr-xr-x 1 root root   568 Nov 13 02:21 /app/start.sh\n</output>"
+ },
+ "2.2_r1": {
+  "exit": "Submitted",
+  "cmds": 60,
+  "checks": 23,
+  "skips": 0,
+  "cost": 0.4186,
+  "last_status": "<returncode>0</returncode>\n<output>\n-rw-r--r-- 1 root root 13853 Nov 13 02:50 /app/app.py\n-rw-r--r-- 1 root root     0 Nov 13 02:40 /app/requirements.txt\n-rwxr-xr-x 1 root root   617 Nov 13 02:40 /app/start.sh\n  1. Cluster.1      PASSED      (9 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (8 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\nHTTP/1.1 401 Unauthorized\n</output>"
+ },
+ "2.2_r2": {
+  "exit": "Submitted",
+  "cmds": 58,
+  "checks": 18,
+  "skips": 1,
+  "cost": 0.3431,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Cluster.1      PASSED      (7 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (9 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n-rw-r--r-- 1 root root 106496 Nov 13 03:06 /app/data/huddle.sqlite3\n-rw-r--r-- 1 root root      0 Nov 13 02:55 /app/requirements.txt\n-rw-r--r-- 1 root root  17671 Nov 13 03:06 /app/server.py\n-rwxr-xr-x 1 root root    651 Nov 13 03:01 /app/start.sh\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\nPONG\n</output>"
+ },
+ "2.3_r1": {
+  "exit": "Submitted",
+  "cmds": 167,
+  "checks": 65,
+  "skips": 1,
+  "cost": 2.384,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. IrcUi.1        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n  2. IrcUi.2        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n  3. IrcUi.3        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n  4. IrcUi.4        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n  5. IrcUi.5        PASSED      (13 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n  6. IrcUi.6        PASSED      (31 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n  7. IrcUi.7        PASSED      (8 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n</output>"
+ },
+ "2.3_r2": {
+  "exit": "Submitted",
+  "cmds": 90,
+  "checks": 46,
+  "skips": 2,
+  "cost": 0.991,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. IrcUi.1        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n  2. IrcUi.2        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n  3. IrcUi.3        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n  4. IrcUi.4        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n  5. IrcUi.5        PASSED      (11 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n  6. IrcUi.6        PASSED      (12 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n  7. IrcUi.7        PASSED      (8 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n</output>"
+ },
+ "3_r1": {
+  "exit": "Submitted",
+  "cmds": 144,
+  "checks": 74,
+  "skips": 3,
+  "cost": 2.0763,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Cluster.1      PASSED      (3 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n  5. Features.1     PASSED      (10 runs)  bash /spec/features/checks/check_features_1.sh\n  6. Features.2     PASSED      (2 runs)  bash /spec/features/checks/check_features_2.sh\n  7. Features.3     PASSED      (2 runs)  bash /spec/features/checks/check_features_3.sh\n  8. Features.4     PASSED      (3 runs)  bash /spec/features/checks/check_features_4.sh\n  9. Features.5     PASSED      (8 runs)  bash /spec/features/checks/check_features_5.sh\n 10. IrcUi.1        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 11. IrcUi.2        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 12. IrcUi.3        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 13. IrcUi.4        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 14. IrcUi.5        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 15. IrcUi.6        PASSED      (12 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 16. IrcUi.7        PASSED      (12 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n-rw-r--r-- 1 root root 51014 Nov 13 04:25 /app/app.py\n-rw-r--r-- 1 root root  5581 Nov 13 04:15 /app/irc.py\n-rw-r--r-- 1 root root    24 Nov 13 04:03 /app/requirements.txt\n-rwxr-xr-x 1 root root   972 Nov 13 04:14 /app/start.sh\n</output>"
+ },
+ "3_r2": {
+  "exit": "Submitted",
+  "cmds": 114,
+  "checks": 74,
+  "skips": 0,
+  "cost": 1.8905,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Cluster.1      PASSED      (7 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n  5. Features.1     PASSED      (3 runs)  bash /spec/features/checks/check_features_1.sh\n  6. Features.2     PASSED      (2 runs)  bash /spec/features/checks/check_features_2.sh\n  7. Features.3     PASSED      (3 runs)  bash /spec/features/checks/check_features_3.sh\n  8. Features.4     PASSED      (2 runs)  bash /spec/features/checks/check_features_4.sh\n  9. Features.5     PASSED      (3 runs)  bash /spec/features/checks/check_features_5.sh\n 10. IrcUi.1        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 11. IrcUi.2        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 12. IrcUi.3        PASSED      (10 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 13. IrcUi.4        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 14. IrcUi.5        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 15. IrcUi.6        PASSED      (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 16. IrcUi.7        PASSED      (24 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n-rw-r--r-- 1 root root  2794 Nov 13 04:48 /app/app.css\n-rw-r--r-- 1 root root 14106 Nov 13 04:49 /app/app.js\n-rw-r--r-- 1 root root  3897 Nov 13 04:47 /app/index.html\n-rw-r--r-- 1 root root  6712 Nov 13 04:39 /app/irc.py\n-rw-r--r-- 1 root root     0 Nov 13 04:29 /app/requirements.txt\n-rw-r--r-- 1 root root 37023 Nov 13 04:50 /app/server.py\n-rwxr-xr-x 1 root root   839 Nov 13 04:34 /app/start.sh\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n--- start.sh ---\n#!/bin/sh\nset -eu\necho $$ >/tmp/start.pid\nmkdir -p /app/data\nredis-server --bind 127.0.0.1 --port 6379 --save '' --appendonly no >/tmp/redis.log 2>&1 &\nr=$!\npids=\"\"\nPORT=0 python3 /app/irc.py >/tmp/irc.log 2>&1 & irc=$!\ntrap 'kill $r $irc $pids 2>/dev/null || true; exit 0' TERM INT EXIT\nfor port in 8000 8001 8002; do PORT=$port python3 /app/server.py >/tmp/node-$port.log 2>&1 & pids=\"$pids $!\"; done\nwhile :; do\n for port in 8000 8001 8002; do\n  if ! ss -ltn \"sport = :$port\" | grep -q LISTEN; then PORT=$port python3 /app/server.py >/tmp/node-$port.log 2>&1 & pids=\"$pids $!\"; fi\n done\n if ! kill -0 \"$irc\" 2>/dev/null; then PORT=0 python3 /app/irc.py >/tmp/irc.log 2>&1 & irc=$!; fi\n if ! kill -0 \"$r\" 2>/dev/null; then redis-server --bind 127.0.0.1 --port 6379 --save '' --appendonly no >/tmp/redis.log 2>&1 & r=$!; fi\n sleep 1\ndone\n--- requirements ---\n</output>"
+ },
+ "4_r1": {
+  "exit": "Submitted",
+  "cmds": 153,
+  "checks": 87,
+  "skips": 5,
+  "cost": 2.8724,
+  "last_status": "<returncode>0</returncode>\n<output>\nSTEP 16 (IrcUi.7) SKIPPED. Later steps may depend on it; come back at the end with: bash /spec/step.sh 16\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 9 15 16. If time is left, go back to each with: bash /spec/step.sh <#>\n  1. Cluster.1      PASSED      (4 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (3 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (2 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n  5. Features.1     PASSED      (7 runs)  bash /spec/features/checks/check_features_1.sh\n  6. Features.2     PASSED      (3 runs)  bash /spec/features/checks/check_features_2.sh\n  7. Features.3     PASSED      (5 runs)  bash /spec/features/checks/check_features_3.sh\n  8. Features.4     PASSED      (2 runs)  bash /spec/features/checks/check_features_4.sh\n  9. Features.5     SKIPPED     (10 runs)  bash /spec/features/checks/check_features_5.sh\n 10. IrcUi.1        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 11. IrcUi.2        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 12. IrcUi.3        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 13. IrcUi.4        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 14. IrcUi.5        PASSED      (9 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 15. IrcUi.6        SKIPPED     (7 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 16. IrcUi.7        SKIPPED     (14 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 9 15 16. If time is left, go back to each with: bash /spec/step.sh <#>\n</output>"
+ },
+ "4_r2": {
+  "exit": "Submitted",
+  "cmds": 142,
+  "checks": 70,
+  "skips": 2,
+  "cost": 2.934,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Cluster.1      PASSED      (11 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  2. Cluster.2      PASSED      (6 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  3. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  4. Cluster.4      PASSED      (2 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n  5. Features.1     PASSED      (2 runs)  bash /spec/features/checks/check_features_1.sh\n  6. Features.2     PASSED      (2 runs)  bash /spec/features/checks/check_features_2.sh\n  7. Features.3     PASSED      (4 runs)  bash /spec/features/checks/check_features_3.sh\n  8. Features.4     PASSED      (2 runs)  bash /spec/features/checks/check_features_4.sh\n  9. Features.5     SKIPPED     (6 runs)  bash /spec/features/checks/check_features_5.sh\n 10. IrcUi.1        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 11. IrcUi.2        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 12. IrcUi.3        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 13. IrcUi.4        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 14. IrcUi.5        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 15. IrcUi.6        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 16. IrcUi.7        SKIPPED     (18 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 9 16. If time is left, go back to each with: bash /spec/step.sh <#>\n{\"status\": \"ok\", \"node_id\": 0}\n{\"status\": \"ok\", \"node_id\": 1}\n{\"status\": \"ok\", \"node_id\": 2}\n</output>"
+ },
+ "5.1_r1": {
+  "exit": "LimitsExceeded",
+  "cmds": 206,
+  "checks": 126,
+  "skips": 0,
+  "cost": 5.0075,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Roles + Channels not passed  (0 runs)  bash /spec/checks/regression.sh\n  2. Cluster.1      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  3. Cluster.2      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  4. Cluster.3      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  5. Cluster.4      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n  6. Features.1     not passed  (0 runs)  bash /spec/features/checks/check_features_1.sh\n  7. Features.2     not passed  (0 runs)  bash /spec/features/checks/check_features_2.sh\n  8. Features.3     not passed  (0 runs)  bash /spec/features/checks/check_features_3.sh\n  9. Features.4     not passed  (0 runs)  bash /spec/features/checks/check_features_4.sh\n 10. Features.5     not passed  (0 runs)  bash /spec/features/checks/check_features_5.sh\n 11. IrcUi.1        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 12. IrcUi.2        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 13. IrcUi.3        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 14. IrcUi.4        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 15. IrcUi.5        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 16. IrcUi.6        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 17. IrcUi.7        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nNEXT: step 1/17, Roles + Channels. Build what bash /spec/checks/regression.sh tests, then run: bash /spec/step.sh\n</output>"
+ },
+ "5.1_r2": {
+  "exit": "Submitted",
+  "cmds": 131,
+  "checks": 67,
+  "skips": 5,
+  "cost": 2.4002,
+  "last_status": "<returncode>0</returncode>\n<output>\nRemaining time (hours:minutes):\n0:23\n  1. Roles + Channels SKIPPED     (6 runs)  bash /spec/checks/regression.sh\n  2. Cluster.1      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n  3. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n  4. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n  5. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n  6. Features.1     PASSED      (3 runs)  bash /spec/features/checks/check_features_1.sh\n  7. Features.2     PASSED      (2 runs)  bash /spec/features/checks/check_features_2.sh\n  8. Features.3     PASSED      (2 runs)  bash /spec/features/checks/check_features_3.sh\n  9. Features.4     PASSED      (3 runs)  bash /spec/features/checks/check_features_4.sh\n 10. Features.5     PASSED      (8 runs)  bash /spec/features/checks/check_features_5.sh\n 11. IrcUi.1        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 12. IrcUi.2        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 13. IrcUi.3        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 14. IrcUi.4        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 15. IrcUi.5        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 16. IrcUi.6        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 17. IrcUi.7        SKIPPED     (6 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 1 15 16 17. If time is left, go back to each with: bash /spec/step.sh <#>\n</output>"
+ },
+ "5.2_r1": {
+  "exit": "LimitsExceeded",
+  "cmds": 186,
+  "checks": 92,
+  "skips": 0,
+  "cost": 5.0088,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Roles.1        PASSED      (15 runs)  bash /spec/checks/regression.sh\n  2. Roles.2        PASSED      (0 runs)  bash /spec/checks/regression.sh\n  3. Roles.3        PASSED      (0 runs)  bash /spec/checks/regression.sh\n  4. Roles.4        PASSED      (0 runs)  bash /spec/checks/regression.sh\n  5. Channels.1     PASSED      (3 runs)  bash /spec/checks/regression.sh\n  6. Channels.2     PASSED      (0 runs)  bash /spec/checks/regression.sh\n  7. Channels.3     PASSED      (0 runs)  bash /spec/checks/regression.sh\n  8. Channels.4     PASSED      (0 runs)  bash /spec/checks/regression.sh\n  9. Roles + Channels PASSED      (1 runs)  bash /spec/checks/regression.sh\n 10. Cluster.1      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n 11. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n 12. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n 13. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n 14. Features.1     PASSED      (1 runs)  bash /spec/features/checks/check_features_1.sh\n 15. Features.2     PASSED      (1 runs)  bash /spec/features/checks/check_features_2.sh\n 16. Features.3     PASSED      (1 runs)  bash /spec/features/checks/check_features_3.sh\n 17. Features.4     PASSED      (1 runs)  bash /spec/features/checks/check_features_4.sh\n 18. Features.5     PASSED      (1 runs)  bash /spec/features/checks/check_features_5.sh\n 19. IrcUi.1        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 20. IrcUi.2        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 21. IrcUi.3        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 22. IrcUi.4        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 23. IrcUi.5        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 24. IrcUi.6        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 25. IrcUi.7        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n</output>"
+ },
+ "5.2_r2": {
+  "exit": "Submitted",
+  "cmds": 99,
+  "checks": 33,
+  "skips": 0,
+  "cost": 1.3834,
+  "last_status": "<returncode>0</returncode>\n<output>\n 10. Cluster.1      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n 11. Cluster.2      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n 12. Cluster.3      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n 13. Cluster.4      not passed  (0 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n 14. Features.1     not passed  (0 runs)  bash /spec/features/checks/check_features_1.sh\n 15. Features.2     not passed  (0 runs)  bash /spec/features/checks/check_features_2.sh\n 16. Features.3     not passed  (0 runs)  bash /spec/features/checks/check_features_3.sh\n 17. Features.4     not passed  (0 runs)  bash /spec/features/checks/check_features_4.sh\n 18. Features.5     not passed  (0 runs)  bash /spec/features/checks/check_features_5.sh\n 19. IrcUi.1        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 20. IrcUi.2        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 21. IrcUi.3        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 22. IrcUi.4        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 23. IrcUi.5        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 24. IrcUi.6        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 25. IrcUi.7        not passed  (0 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nNEXT: step 1/25, Roles.1. Read /spec/roles/roles-1-foundations.md, build it, then run: bash /spec/step.sh\nREGRESSION FAIL channels 59 not reached: the check's 22 second time budget ran out (rules 33-35 took 19.0 s)\nREGRESSION FAIL channels 60 not reached: the check's 22 second time budget ran out (rules 33-35 took 19.0 s)\nREGRESSION FAIL channels 63 not reached: the check's 22 second time budget ran out (rules 33-35 took 19.0 s)\nREGRESSION FAIL channels 64 not reached: the check's 22 second time budget ran out (rules 33-35 took 19.0 s)\nREGRESSION FAIL channels 65 not reached: the check's 22 second time budget ran out (rules 33-35 took 19.0 s)\nREGRESSION FAIL channels 66 not reached: the check's 22 second time budget ran out (rules 33-35 took 19.0 s)\nREGRESSION NOTE roles rules 75-76 (a killed node) were not run this time: the other rules used most of the time limit; run the suite again\nREGRESSION: 33 broken\n</output>"
+ },
+ "5.3_r1": {
+  "exit": "Submitted",
+  "cmds": 179,
+  "checks": 79,
+  "skips": 4,
+  "cost": 4.1793,
+  "last_status": "<returncode>0</returncode>\n<output>\n  1. Roles.1        PASSED      (1 runs)  bash /spec/roles/checks/check_roles_1.sh\n  2. Roles.2        PASSED      (1 runs)  bash /spec/roles/checks/check_roles_2.sh\n  3. Roles.3        PASSED      (2 runs)  bash /spec/roles/checks/check_roles_3.sh\n  4. Roles.4        PASSED      (1 runs)  bash /spec/roles/checks/check_roles_4.sh\n  5. Channels.1     PASSED      (4 runs)  bash /spec/channels/checks/check_channels_1.sh\n  6. Channels.2     PASSED      (3 runs)  bash /spec/channels/checks/check_channels_2.sh\n  7. Channels.3     SKIPPED     (7 runs)  bash /spec/channels/checks/check_channels_3.sh\n  8. Channels.4     PASSED      (3 runs)  bash /spec/channels/checks/check_channels_4.sh\n  9. Cluster.1      PASSED      (2 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n 10. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n 11. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n 12. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n 13. Features.1     PASSED      (2 runs)  bash /spec/features/checks/check_features_1.sh\n 14. Features.2     PASSED      (1 runs)  bash /spec/features/checks/check_features_2.sh\n 15. Features.3     PASSED      (3 runs)  bash /spec/features/checks/check_features_3.sh\n 16. Features.4     PASSED      (1 runs)  bash /spec/features/checks/check_features_4.sh\n 17. Features.5     PASSED      (6 runs)  bash /spec/features/checks/check_features_5.sh\n 18. IrcUi.1        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 19. IrcUi.2        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 20. IrcUi.3        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 21. IrcUi.4        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 22. IrcUi.5        PASSED      (7 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 23. IrcUi.6        SKIPPED     (8 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 24. IrcUi.7        PASSED      (12 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS DONE EXCEPT THE SKIPPED ONES: 7 23. If time is left, go back to each with: bash /spec/step.sh <#>\n{\"status\":\"ok\",\"node_id\":0}{\"status\":\"ok\",\"node_id\":1}{\"status\":\"ok\",\"node_id\":2}LISTEN 0      5          127.0.0.1:8001       0.0.0.0:*          \nLISTEN 0      5          127.0.0.1:8000       0.0.0.0:*          \nLISTEN 0      5          127.0.0.1:8002       0.0.0.0:*          \nLISTEN 0      511        127.0.0.1:6379       0.0.0.0:*          \nLISTEN 0      100          0.0.0.0:6667       0.0.0.0:*          \n</output>"
+ },
+ "5.3_r2": {
+  "exit": "Submitted",
+  "cmds": 145,
+  "checks": 72,
+  "skips": 1,
+  "cost": 3.0579,
+  "last_status": "<returncode>0</returncode>\n<output>\n8000 200 {\"status\": \"ok\", \"node_id\": 0}\n8001 200 {\"status\": \"ok\", \"node_id\": 1}\n8002 200 {\"status\": \"ok\", \"node_id\": 2}\n-rw-r--r-- 1 root root  4814 Nov 13 08:48 /app/index.html\n-rwxr-xr-x 1 root root  7311 Nov 13 08:42 /app/irc.py\n-rw-r--r-- 1 root root     0 Nov 13 08:29 /app/requirements.txt\n-rwxr-xr-x 1 root root 64838 Nov 13 08:49 /app/server.py\n-rwxr-xr-x 1 root root   750 Nov 13 08:41 /app/start.sh\n-rw-r--r-- 1 root root  3246 Nov 13 08:48 /app/static_app.css\n-rw-r--r-- 1 root root 13323 Nov 13 08:48 /app/static_app.js\n  1. Roles.1        PASSED      (1 runs)  bash /spec/roles/checks/check_roles_1.sh\n  2. Roles.2        PASSED      (2 runs)  bash /spec/roles/checks/check_roles_2.sh\n  3. Roles.3        PASSED      (2 runs)  bash /spec/roles/checks/check_roles_3.sh\n  4. Roles.4        PASSED      (2 runs)  bash /spec/roles/checks/check_roles_4.sh\n  5. Channels.1     PASSED      (2 runs)  bash /spec/channels/checks/check_channels_1.sh\n  6. Channels.2     PASSED      (3 runs)  bash /spec/channels/checks/check_channels_2.sh\n  7. Channels.3     PASSED      (2 runs)  bash /spec/channels/checks/check_channels_3.sh\n  8. Channels.4     PASSED      (2 runs)  bash /spec/channels/checks/check_channels_4.sh\n  9. Cluster.1      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_1.sh\n 10. Cluster.2      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_2.sh\n 11. Cluster.3      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_3.sh\n 12. Cluster.4      PASSED      (1 runs)  bash /spec/cluster/checks/check_cluster_4.sh\n 13. Features.1     PASSED      (3 runs)  bash /spec/features/checks/check_features_1.sh\n 14. Features.2     PASSED      (1 runs)  bash /spec/features/checks/check_features_2.sh\n 15. Features.3     PASSED      (3 runs)  bash /spec/features/checks/check_features_3.sh\n 16. Features.4     PASSED      (2 runs)  bash /spec/features/checks/check_features_4.sh\n 17. Features.5     PASSED      (7 runs)  bash /spec/features/checks/check_features_5.sh\n 18. IrcUi.1        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_1.sh\n 19. IrcUi.2        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_2.sh\n 20. IrcUi.3        PASSED      (4 runs)  bash /spec/irc-ui/checks/check_irc_ui_3.sh\n 21. IrcUi.4        PASSED      (1 runs)  bash /spec/irc-ui/checks/check_irc_ui_4.sh\n 22. IrcUi.5        PASSED      (3 runs)  bash /spec/irc-ui/checks/check_irc_ui_5.sh\n 23. IrcUi.6        PASSED      (9 runs)  bash /spec/irc-ui/checks/check_irc_ui_6.sh\n 24. IrcUi.7        PASSED      (2 runs)  bash /spec/irc-ui/checks/check_irc_ui_7.sh\n\nALL STEPS PASSED. Now follow \"Before you submit\" in /spec/README.md.\n</output>"
+ }
+}

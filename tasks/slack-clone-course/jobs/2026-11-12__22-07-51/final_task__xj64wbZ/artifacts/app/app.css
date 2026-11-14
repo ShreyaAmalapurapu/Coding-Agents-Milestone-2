@@ -1,0 +1,18 @@
+body{margin:0;font:14px Arial}#app{display:grid;grid-template-columns:240px 1fr 300px;height:100vh}aside{background:#3f245c;color:white;padding:16px}main{padding:20px}.message{padding:12px;border-bottom:1px solid #ddd}.message-avatar{display:inline-block;background:#19a;color:#fff;border-radius:50%;padding:8px}.message-tools{display:none}.message:hover .message-tools{display:inline}button[data-button-role=primary]{background:#007a5a;color:#fff}button[data-button-role=danger]{background:#e01e5a;color:#fff}button[data-button-role=secondary]{background:#1264a3;color:#fff}button{padding:8px;border:0;margin:4px}
+[data-testid="emoji-picker"]{display:grid;grid-template-columns:repeat(3,auto);gap:4px;padding:6px;background:#fff;border:1px solid #bbb}
+[data-testid="emoji-picker"][hidden]{display:none}
+[data-testid="reaction-chip"]{display:inline-block;background:#eef;padding:3px 6px;margin:3px;border:1px solid #ccd;cursor:pointer}
+#workspace-settings-modal.open{display:block!important;visibility:visible!important;opacity:1!important}
+#workspace-settings-modal.open [data-testid="workspace-settings-close"]{display:block!important;visibility:visible!important}
+[data-testid="emoji-picker"]{position:fixed;z-index:9999;background:#fff;color:#111;display:grid;grid-template-columns:repeat(3,56px);gap:8px;padding:12px;border:2px solid #1264a3;box-shadow:0 4px 16px #555}
+[data-testid="emoji-picker"] button[data-testid="emoji-option"]{display:block!important;width:56px;height:48px;background:#fff;color:#111;border:1px solid #999;font-size:24px;cursor:pointer}
+[data-testid="reaction-button"],[data-testid="emoji-picker"] button{pointer-events:auto}
+[data-testid="emoji-picker"].open{display:grid!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+[data-testid="emoji-picker"].open [data-testid="emoji-option"]{display:block!important;visibility:visible!important;pointer-events:auto!important}
+[data-testid="message"]{position:relative;min-height:42px}
+[data-testid="message"] button[data-testid="reaction-button"],
+[data-testid="message"] button[data-testid="edit-message-btn"],
+[data-testid="message"] button[data-testid="delete-message-btn"],
+[data-testid="message"] button[data-testid="open-thread-btn"]{display:inline-block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:relative;z-index:3}
+[data-testid="message"] [data-testid="emoji-picker"][hidden]{display:none!important}
+[data-testid="emoji-picker"].open{display:grid!important;visibility:visible!important;opacity:1!important}

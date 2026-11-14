@@ -1,0 +1,190 @@
+=== C /spec/features/checks/check_features_1.sh
+FAIL 1 not checked: setup: could not register users (register must work first)
+FAIL 2 not checked: setup: could not register users (register must work first)
+FAIL 3 not checked: setup: could not register users (register must work first)
+FAIL 4 not checked: setup: could not register users (register must work first)
+FAIL 5 not checked: setup: could not register users (register must work first)
+FAIL 6 not checked: setup: could not register users (register must work first)
+FAIL 7 not checked: setup: could not register users (register must work first)
+FAIL 8 not checked: setup: could not register users (register must work first)
+FAIL 9 not checked: setup: could not register users (register must work first)
+FAIL 10 not checked: setup: could not register users (register must work first)
+FAIL 11 not checked: setup: could not register users (register must work first)
+FAIL 12 not checked: setup: could not register users (register must work first)
+FAIL 13 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 13 failed
+=== C /spec/features/checks/check_features_2.sh
+FAIL 14 not checked: setup: could not register users (register must work first)
+FAIL 15 not checked: setup: could not register users (register must work first)
+FAIL 16 not checked: setup: could not register users (register must work first)
+FAIL 17 not checked: setup: could not register users (register must work first)
+FAIL 18 not checked: setup: could not register users (register must work first)
+FAIL 19 not checked: setup: could not register users (register must work first)
+FAIL 20 not checked: setup: could not register users (register must work first)
+FAIL 21 not checked: setup: could not register users (register must work first)
+FAIL 22 not checked: setup: could not register users (register must work first)
+FAIL 23 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 10 failed
+=== C /spec/features/checks/check_features_3.sh
+FAIL 24 not checked: setup: could not register users (register must work first)
+FAIL 25 not checked: setup: could not register users (register must work first)
+FAIL 26 not checked: setup: could not register users (register must work first)
+FAIL 27 not checked: setup: could not register users (register must work first)
+FAIL 28 not checked: setup: could not register users (register must work first)
+FAIL 29 not checked: setup: could not register users (register must work first)
+FAIL 30 not checked: setup: could not register users (register must work first)
+FAIL 31 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 8 failed
+=== C /spec/features/checks/check_features_4.sh
+FAIL 32 not checked: setup: could not register users (register must work first)
+FAIL 33 not checked: setup: could not register users (register must work first)
+FAIL 34 not checked: setup: could not register users (register must work first)
+FAIL 35 not checked: setup: could not register users (register must work first)
+FAIL 36 not checked: setup: could not register users (register must work first)
+FAIL 37 not checked: setup: could not register users (register must work first)
+FAIL 38 not checked: setup: could not register users (register must work first)
+FAIL 39 not checked: setup: could not register users (register must work first)
+FAIL 40 not checked: setup: could not register users (register must work first)
+FAIL 41 not checked: setup: could not register users (register must work first)
+FAIL 42 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 11 failed
+=== C /spec/features/checks/check_features_5.sh
+FAIL 43 not checked: setup: could not register users (register must work first)
+FAIL 44 not checked: setup: could not register users (register must work first)
+FAIL 45 not checked: setup: could not register users (register must work first)
+FAIL 46 not checked: setup: could not register users (register must work first)
+FAIL 47 not checked: setup: could not register users (register must work first)
+FAIL 48 not checked: setup: could not register users (register must work first)
+FAIL 49 not checked: setup: could not register users (register must work first)
+FAIL 50 not checked: setup: could not register users (register must work first)
+FAIL 51 not checked: setup: could not register users (register must work first)
+FAIL 52 not checked: setup: could not register users (register must work first)
+FAIL 53 not checked: setup: could not register users (register must work first)
+FAIL 54 not checked: setup: could not register users (register must work first)
+FAIL 55 not checked: setup: could not register users (register must work first)
+FAIL 56 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 14 failed
+SCORE C 0 56
+=== D /spec/cluster/checks/check_cluster_1.sh
+FAIL 3 not checked: setup: could not register a user (register must work first)
+FAIL 4 not checked: setup: could not register a user (register must work first)
+FAIL 5 not checked: setup: could not register a user (register must work first)
+RESULT: 2 passed, 3 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+FAIL 6 not checked: setup: could not register a user (register must work first)
+FAIL 7 not checked: setup: could not register a user (register must work first)
+FAIL 8 not checked: setup: could not register a user (register must work first)
+FAIL 9 not checked: setup: could not register a user (register must work first)
+FAIL 10 not checked: setup: could not register a user (register must work first)
+FAIL 11 not checked: setup: could not register a user (register must work first)
+FAIL 12 not checked: setup: could not register a user (register must work first)
+RESULT: 0 passed, 7 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+FAIL 13 not checked: setup: could not register a user (register must work first)
+FAIL 14 not checked: setup: could not register a user (register must work first)
+FAIL 15 not checked: setup: could not register a user (register must work first)
+FAIL 16 not checked: setup: could not register a user (register must work first)
+FAIL 17 not checked: setup: could not register a user (register must work first)
+FAIL 18 not checked: setup: could not register a user (register must work first)
+RESULT: 0 passed, 6 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+FAIL 19 not checked: setup: could not register a user (register must work first)
+FAIL 20 not checked: setup: could not register a user (register must work first)
+FAIL 21 not checked: setup: could not register a user (register must work first)
+RESULT: 0 passed, 3 failed
+SCORE D 2 19
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+FAIL 1 not checked: setup: could not register users (register must work first)
+FAIL 2 not checked: setup: could not register users (register must work first)
+FAIL 3 not checked: setup: could not register users (register must work first)
+FAIL 4 not checked: setup: could not register users (register must work first)
+FAIL 5 not checked: setup: could not register users (register must work first)
+FAIL 6 not checked: setup: could not register users (register must work first)
+FAIL 7 not checked: setup: could not register users (register must work first)
+FAIL 8 not checked: setup: could not register users (register must work first)
+FAIL 9 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 9 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+FAIL 10 not checked: setup: could not register users (register must work first)
+FAIL 11 not checked: setup: could not register users (register must work first)
+FAIL 12 not checked: setup: could not register users (register must work first)
+FAIL 13 not checked: setup: could not register users (register must work first)
+FAIL 14 not checked: setup: could not register users (register must work first)
+FAIL 15 not checked: setup: could not register users (register must work first)
+FAIL 16 not checked: setup: could not register users (register must work first)
+FAIL 17 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+FAIL 18 not checked: setup: could not register users (register must work first)
+FAIL 19 not checked: setup: could not register users (register must work first)
+FAIL 20 not checked: setup: could not register users (register must work first)
+FAIL 21 not checked: setup: could not register users (register must work first)
+FAIL 22 not checked: setup: could not register users (register must work first)
+FAIL 23 not checked: setup: could not register users (register must work first)
+FAIL 24 not checked: setup: could not register users (register must work first)
+FAIL 25 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+FAIL 31 not checked: setup: could not register users (register must work first)
+FAIL 32 not checked: setup: could not register users (register must work first)
+FAIL 33 not checked: setup: could not register users (register must work first)
+FAIL 34 not checked: setup: could not register users (register must work first)
+FAIL 35 not checked: setup: could not register users (register must work first)
+FAIL 36 not checked: setup: could not register users (register must work first)
+FAIL 37 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 7 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 38 not checked: setup: could not register users (register must work first)
+FAIL 39 not checked: setup: could not register users (register must work first)
+FAIL 40 not checked: setup: could not register users (register must work first)
+FAIL 41 not checked: setup: could not register users (register must work first)
+FAIL 42 not checked: setup: could not register users (register must work first)
+FAIL 43 not checked: setup: could not register users (register must work first)
+FAIL 44 not checked: setup: could not register users (register must work first)
+FAIL 45 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 46 not checked: setup: could not register users (register must work first)
+FAIL 47 not checked: setup: could not register users (register must work first)
+FAIL 48 not checked: setup: could not register users (register must work first)
+FAIL 49 not checked: setup: could not register users (register must work first)
+FAIL 50 not checked: setup: could not register users (register must work first)
+FAIL 51 not checked: setup: could not register users (register must work first)
+FAIL 52 not checked: setup: could not register users (register must work first)
+FAIL 53 not checked: setup: could not register users (register must work first)
+RESULT: 0 passed, 8 failed
+SCORE E 5 48
+=== A /spec/roles/checks/check_roles_1.sh
+FAIL 0 setup: could not register users (rule 1 must work first)
+RESULT: 0 passed, 1 failed
+=== A /spec/roles/checks/check_roles_2.sh
+FAIL 0 setup: could not register users (rule 1 must work first)
+RESULT: 0 passed, 1 failed
+=== A /spec/roles/checks/check_roles_3.sh
+FAIL 0 setup: could not register users (rule 1 must work first)
+RESULT: 0 passed, 1 failed
+=== A /spec/roles/checks/check_roles_4.sh
+FAIL 74 setup: could not register a user to get a token (Roles.1 rule 1 first)
+RESULT: 5 passed, 1 failed
+SCORE A 5 4
+=== B /spec/channels/checks/check_channels_1.sh
+FAIL 0 setup: could not register users (component A must work first)
+RESULT: 0 passed, 1 failed
+=== B /spec/channels/checks/check_channels_2.sh
+FAIL 0 setup: could not register users (component A must work first)
+RESULT: 0 passed, 1 failed
+=== B /spec/channels/checks/check_channels_3.sh
+FAIL 0 setup: could not register users (component A must work first)
+RESULT: 0 passed, 1 failed
+=== B /spec/channels/checks/check_channels_4.sh
+FAIL 0 setup: could not register users (component A must work first)
+RESULT: 0 passed, 1 failed
+SCORE B 0 4
+=== REG
+REGRESSION FAIL roles 0 setup: could not register users (rule 1 must work first)
+REGRESSION FAIL channels 0 setup: could not register users (component A must work first)
+REGRESSION FAIL roles 74 setup: could not register a user to get a token (Roles.1 rule 1 first)
+REGRESSION: 3 broken
+SCORE REG 3

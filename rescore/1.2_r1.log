@@ -1,0 +1,10 @@
+=== D /spec/cluster/checks/check_cluster_1.sh
+RESULT: 5 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+FAIL 12 the restarted node shows the outage writes, and its new post reaches 8002 with the next event_id: 8001 list 200 ['during-b 6af74310248', 'during-a 6af74310248'], post 201, frames [] (the post through the restarted 8001 was stored but never reached the socket on 8002 within 3s: the restarted node must publish its events again and other nodes must deliver them)
+RESULT: 6 passed, 1 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+RESULT: 6 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+RESULT: 3 passed, 0 failed
+SCORE D 20 1

@@ -1,0 +1,16 @@
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+NOTE: node 1 did not come back on 8001; /app/start.sh must restart a killed node (Cluster.2)
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+RESULT: 7 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+RESULT: 8 passed, 0 failed
+SCORE E 53 0

@@ -1,0 +1,62 @@
+=== C /spec/features/checks/check_features_1.sh
+FAIL 3 PATCH /api/users/me changes only the fields sent and returns {user}: statuses 404/404, user {}
+FAIL 4 profile changes are visible on 8002 (users/{id}) and 8001 (auth/me): 8002 {"id": 2, "username": "pa6af745f969b", "display_name": "pa6af745f969b", "timezone": "UTC", "avatar_url": "", "status_text": "", "status_emoji": "", "m, 8001 {"id": 2, "username": "pa6af745f969b", "display_name": "pa6af745f969b", "timezone": "UTC", "avatar_url": "", "status_text": "", "status_emoji": "", "m
+FAIL 5 a valid IANA timezone is saved, an invalid one is 400 and changes nothing: valid -> 404, invalid -> 404, stored 'UTC'
+FAIL 6 length limits: display_name 1-80, status_text 0-100, status_emoji 0-64, avatar_url 0-2048 (else 400, nothing saved): statuses [404, 404, 404, 404, 404, 404, 404, 404] (expected [200, 400, 200, 400, 400, 400, 200, 400]), stored display_name length 13
+FAIL 7 PATCH /api/users/me without a token 401, a non-string field 400: got 401 and 404
+FAIL 8 PATCH on 8000 sends user.updated with the new user to a socket on 8002, with no channel_id or event_id: frame null
+RESULT: 7 passed, 6 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+RESULT: 11 passed, 0 failed
+=== C /spec/features/checks/check_features_5.sh
+FAIL 54 error or timeout over WebSocket (TimeoutError )
+RESULT: 13 passed, 1 failed
+SCORE C 49 7
+=== D /spec/cluster/checks/check_cluster_1.sh
+RESULT: 5 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+RESULT: 7 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+RESULT: 6 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+RESULT: 3 passed, 0 failed
+SCORE D 21 0
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+FAIL 27 every always-present data-testid is in the initial HTML: missing ['auth-form', 'auth-submit', 'auth-toggle', 'channel-list', 'dms-list', 'logout-btn', 'workspace-header', 'workspace-name-input', 'workspace-join-mode', 'workspace-general-submit', 'channel-title', 'channel-members-list', 'channel-add-member-form', 'channel-add-member-input', 'channel-add-member-submit', 'archive-channel-btn', 'unarchive-channel-btn', 'create-channel-private', 'message-list', 'message-input', 'send-btn', 'thread-panel', 'settings-pane-general', 'create-invitation-form', 'invitations-list']
+FAIL 28 the DOM ids auth-modal, create-channel-modal, channel-settings-modal, workspace-settings-modal, create-invitation-form are present: missing ['auth-modal', 'create-invitation-form']
+FAIL 29 each pinned button carries the right data-button-role on the same element as its data-testid: wrong or missing for ['auth-submit', 'send-btn', 'thread-send', 'workspace-general-submit', 'channel-add-member-submit', 'archive-channel-btn', 'logout-btn', 'unarchive-channel-btn', 'close-thread']
+RESULT: 2 passed, 3 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+FAIL 31 check stopped (list index out of range)
+FAIL 32 check stopped (list index out of range)
+FAIL 33 check stopped (list index out of range)
+FAIL 34 check stopped (list index out of range)
+FAIL 35 check stopped (list index out of range)
+FAIL 36 check stopped (list index out of range)
+FAIL 37 check stopped (list index out of range)
+RESULT: 0 passed, 7 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 38 browser step failed: Locator.hover: Timeout 2500ms exceeded.
+FAIL 39 browser step failed: Locator.hover: Timeout 2500ms exceeded.
+FAIL 40 browser step failed: Locator.hover: Timeout 2500ms exceeded.
+FAIL 41 not reached: the check's time budget ran out (earlier rules were slow)
+FAIL 42 not reached: the check's time budget ran out (earlier rules were slow)
+FAIL 43 not reached: the check's time budget ran out (earlier rules were slow)
+FAIL 44 not reached: the check's time budget ran out (earlier rules were slow)
+FAIL 45 not reached: the check's time budget ran out (earlier rules were slow)
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 50 channel-settings-btn opens the modal; channel-topic-input and submit save the topic, shown in channel-topic; close hides it: modal True, closed True, header topic True, API topic ['']
+FAIL 51 workspace settings: the members tab shows your owner role-badge; the invitations tab creates a working invitation-code: modal True, owner badge True, code 'invite-1794590474400', accept with it -> 0
+RESULT: 6 passed, 2 failed
+SCORE E 33 20

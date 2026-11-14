@@ -1,0 +1,39 @@
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+FAIL 2 the listing on 8002 shows the edited body and edited_at: listed {}
+FAIL 4 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 5 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 9 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 7 editing a deleted message returns 409: got 200
+RESULT: 4 passed, 5 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+FAIL 12 NICK already in use gets 433, the connection stays open, and a free NICK then registers: first ':server 433 * ia6af74377bfe :Nickname in use', then None
+RESULT: 7 passed, 1 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+FAIL 20 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 21 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 22 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 23 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 24 error or timeout (InvalidMessage did not receive a valid HTTP response)
+FAIL 25 error or timeout (InvalidMessage did not receive a valid HTTP response)
+RESULT: 2 passed, 6 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+FAIL 35 check stopped (Page.click: Timeout 3000ms exceeded.) (waiting for locator("[data-testid=\"channel-entry\"][data-channel-name=\"general\"]"): no element matches)
+FAIL 36 check stopped (Page.click: Timeout 3000ms exceeded.) (waiting for locator("[data-testid=\"channel-entry\"][data-channel-name=\"general\"]"): no element matches)
+FAIL 37 check stopped (Page.click: Timeout 3000ms exceeded.) (waiting for locator("[data-testid=\"channel-entry\"][data-channel-name=\"general\"]"): no element matches)
+RESULT: 4 passed, 3 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 38 browser step failed: Locator.hover: Timeout 2500ms exceeded. [page JS error: unauthorized; API calls that failed: GET /api/channels/5/messages failed (net::ERR_EMPTY_RESPONSE), GET /api/channels/5/messages failed (net::ERR_EMPTY_RESPONSE), GET api/channels/5/messages -> 401]
+FAIL 39 browser step failed: Locator.hover: Timeout 2500ms exceeded.
+FAIL 40 browser step failed: Locator.hover: Timeout 2500ms exceeded.
+FAIL 41 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"close-thread\"]"): it exists but is not visible; hover toolbars must show on mouse hover)
+FAIL 42 browser step failed: Locator.hover: Timeout 2500ms exceeded.
+FAIL 43 browser step failed: Locator.click: Timeout 2500ms exceeded.
+FAIL 44 browser step failed: Locator.inner_text: Timeout 2500ms exceeded.
+FAIL 45 an empty channel shows a non-blank empty-state sentence in message-list and no messages: messages 0, text '' [page JS error: unauthorized; API calls that failed: GET api/channels/6/messages -> 401]
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 50 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"channel-settings-close\"]"): it exists but is not visible; hover toolbars must show on mouse hover) [page JS errors (2, first): Failed to fetch; API calls that failed: GET /api/channels/8/messages failed (net::ERR_EMPTY_RESPONSE), GET /api/channels/8/messages failed (net::ERR_EMPTY_RESPONSE)]
+RESULT: 7 passed, 1 failed
+SCORE E 29 24

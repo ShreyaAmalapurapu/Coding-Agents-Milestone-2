@@ -1,0 +1,65 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+RESULT: 11 passed, 0 failed
+=== C /spec/features/checks/check_features_5.sh
+RESULT: 14 passed, 0 failed
+SCORE C 56 0
+=== D /spec/cluster/checks/check_cluster_1.sh
+RESULT: 5 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+RESULT: 7 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+RESULT: 6 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+RESULT: 3 passed, 0 failed
+SCORE D 21 0
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+FAIL 16 QUIT closes the connection without an error reply: closed False, error lines []
+RESULT: 7 passed, 1 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+FAIL 33 a valid sign-up logs in: huddle.token holds a working token and current-user shows the username: token works for 'ui6af74e9cdaa', current-user ''; after submit the form's data-mode is 'register', alert 'invalid registration'
+FAIL 35 posting with message-input and send-btn shows the message, stores it, and it survives a reload: shown False, stored False, after reload False
+FAIL 37 a message another user posts (on 8002) appears in the open channel within 3s, without a reload: not shown after 3s (the UI must use the WebSocket)
+RESULT: 4 passed, 3 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 38 browser step failed: Locator.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"message\"]").filter(has_text="edit me 6af74eaadbc").first.locator("[data-testid=\"edit-message-btn\"]"): no element matches)
+FAIL 39 browser step failed: Locator.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"message\"]").filter(has_text="delete me 6af74eaadbc").first.locator("[data-testid=\"delete-message-btn\"]"): no element matches)
+FAIL 40 browser step failed: Locator.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"message\"]").filter(has_text="thread me 6af74eaadbc").first.locator("[data-testid=\"open-thread-btn\"]"): no element matches)
+FAIL 41 close-thread hides the thread panel: thread-panel still visible
+FAIL 42 browser step failed: Locator.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"message\"]").filter(has_text="react me 6af74eaadbc").first.locator("[data-testid=\"reaction-button\"]"): no element matches)
+FAIL 43 browser step failed: Locator.click: Timeout 2500ms exceeded.
+FAIL 44 browser step failed: Locator.inner_text: Timeout 2500ms exceeded.
+FAIL 45 an empty channel shows a non-blank empty-state sentence in message-list and no messages: messages 0, text ''
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+RESULT: 8 passed, 0 failed
+SCORE E 41 12
+=== A /spec/roles/checks/check_roles_1.sh
+RESULT: 21 passed, 0 failed
+=== A /spec/roles/checks/check_roles_2.sh
+RESULT: 23 passed, 0 failed
+=== A /spec/roles/checks/check_roles_3.sh
+RESULT: 26 passed, 0 failed
+=== A /spec/roles/checks/check_roles_4.sh
+RESULT: 6 passed, 0 failed
+SCORE A 76 0
+=== B /spec/channels/checks/check_channels_1.sh
+RESULT: 15 passed, 0 failed
+=== B /spec/channels/checks/check_channels_2.sh
+RESULT: 24 passed, 0 failed
+=== B /spec/channels/checks/check_channels_3.sh
+RESULT: 10 passed, 0 failed
+=== B /spec/channels/checks/check_channels_4.sh
+RESULT: 17 passed, 0 failed
+SCORE B 66 0

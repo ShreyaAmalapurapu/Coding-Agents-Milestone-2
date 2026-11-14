@@ -1,0 +1,11 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+RESULT: 11 passed, 0 failed
+=== C /spec/features/checks/check_features_5.sh
+RESULT: 14 passed, 0 failed
+SCORE C 56 0

@@ -1,0 +1,158 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+FAIL 35 /topic sets the topic: 201 with message null and the updated channel; over 250 chars 400: status 201, body {"message": {"id": 11, "channel_id": 9, "author_id": 11, "author": {"id": 11, "username": "so6af74ca3564", "display_name": "so6af74ca3564", "timezone": "UTC", "avatar_url": "", "status_text": "", "sta, too long -> 201
+FAIL 36 /invite @user adds a workspace member to the channel: 201, message null, invited_user: status 201, body {"message": {"id": 13, "channel_id": 9, "author_id": 11, "author": {"id": 11, "username": "so6af74ca3564", "display_name": "so6af74ca3564", "timezone": "UTC", "avatar_url": "", "status_text": "", "sta, members ['sa6af74ca3564', 'sb6af74ca3564', 'so6af74ca3564']
+FAIL 37 /invite of an unknown username is 404: got 201
+FAIL 38 /archive by a plain member is 403: got 201
+FAIL 39 /archive and /unarchive by the owner: 201, message null, channel.is_archived true then false; posts 423 while archived: archive 201 None, post 201, unarchive 201 None, post 201
+FAIL 42 side-effect commands store no message: /topic gives only channel.updated, and none appear in the listing: head 13, frames [('message.created', 14)], stored command messages ['/topic Live topic', '/unarchive', '/archive', '/archive', '/invite @nosuch6af74ca3564', '/invite @se6af74ca3564', '/topic ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt', '/topic Sprint planning']
+RESULT: 5 passed, 6 failed
+=== C /spec/features/checks/check_features_5.sh
+RESULT: 14 passed, 0 failed
+SCORE C 50 6
+=== D /spec/cluster/checks/check_cluster_1.sh
+RESULT: 5 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+RESULT: 7 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+RESULT: 6 passed, 0 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+RESULT: 3 passed, 0 failed
+SCORE D 21 0
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+RESULT: 7 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 38 browser step failed: Locator.fill: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"message\"]").filter(has_text="edit me 6af74cf1764").first.locator("[data-testid=\"edit-message-input\"]"): no element matches) [page JS error: Unexpected end of input]
+FAIL 45 an empty channel shows a non-blank empty-state sentence in message-list and no messages: messages 3, text 'mma6af74cf1764 5:46:25 PM\nedit me 6af74cf1764\nEditDeleteThreadReact\nmma6af74cf17' [page JS error: Unexpected end of input]
+RESULT: 6 passed, 2 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 50 channel-settings-btn opens the modal; channel-topic-input and submit save the topic, shown in channel-topic; close hides it: modal True, closed True, header topic False, API topic [] [page JS error: Unexpected end of input]
+FAIL 51 workspace settings: the members tab shows your owner role-badge; the invitations tab creates a working invitation-code: modal True, owner badge True, code '', accept with it -> None
+FAIL 52 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"auth-toggle\"]"): it exists but is not visible; hover toolbars must show on mouse hover)
+RESULT: 5 passed, 3 failed
+SCORE E 48 5
+=== A /spec/roles/checks/check_roles_1.sh
+FAIL 5 login: expected 200 with a token, got status 000
+FAIL 6 login with wrong password: expected 401, got 000
+FAIL 7 me: expected 200 and o6af74d134cc9, got 000 and ''
+FAIL 8 me without a valid token: expected 401 then 401, got 000 then 000
+FAIL 9 login on 8002 and me on 8001 after register on 8000: expected 200 then 200, got 000 then 000
+NOTE: the 22 second time budget ran out; this rule and every rule after it were not checked (the app is too slow, or hung)
+RESULT: 4 passed, 5 failed
+=== A /spec/roles/checks/check_roles_2.sh
+FAIL 20 owner promote: expected 200 and admin, got 000 and ''
+NOTE: the 22 second time budget ran out; this rule and every rule after it were not checked (the app is too slow, or hung)
+RESULT: 0 passed, 1 failed
+=== A /spec/roles/checks/check_roles_3.sh
+FAIL 41 owner invitation: expected 201 and a code, got 000 and ''
+NOTE: the 22 second time budget ran out; this rule and every rule after it were not checked (the app is too slow, or hung)
+RESULT: 0 passed, 1 failed
+=== A /spec/roles/checks/check_roles_4.sh
+RESULT: 6 passed, 0 failed
+SCORE A 10 7
+=== B /spec/channels/checks/check_channels_1.sh
+FAIL 4 duplicate name 409, same name in another workspace 201: got 409 and 0
+FAIL 5 workspace detail has workspace, channels, read_state and general: status 0, channels []
+RESULT: 13 passed, 2 failed
+=== B /spec/channels/checks/check_channels_2.sh
+FAIL 21 a message posted between pages does not shift page 2: status 200, bodies ['m4', 'm3']
+FAIL 25 replies are oldest first and page correctly: all ['r1', 'r2', 'r3'], page1 ['r1', 'r2', 'r3'], page2 []
+FAIL 26 search finds matches newest first and hides private channels: owner got ['second zq6af74d8729f', 'first zq6af74d8729f'], other member got []
+FAIL 27 workspace_id limits search to one workspace: workspace 1 results ['ws2 zq6af74d8729f', 'second zq6af74d8729f', 'first zq6af74d8729f'], workspace 2 results ['ws2 zq6af74d8729f', 'second zq6af74d8729f', 'first zq6af74d8729f']
+FAIL 29 pin list is newest-pinned first, has the right fields and pages: list ['p3', 'p2', 'p1'], page1 [], page2 []
+FAIL 30 unpin returns {unpinned: true} and removes the pin: status 0, body None, list []
+FAIL 31 private channel pin list: outsider 403, member 200: got 0 and 0
+FAIL 52 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 53 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 54 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 55 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 63 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 64 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 65 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+RESULT: 10 passed, 14 failed
+=== B /spec/channels/checks/check_channels_3.sh
+FAIL 32 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 33 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 34 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 35 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 36 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 37 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 38 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 39 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 61 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+FAIL 62 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+RESULT: 0 passed, 10 failed
+=== B /spec/channels/checks/check_channels_4.sh
+FAIL 47 unread_count rises by 3 after 3 posts: before 0, after 0
+FAIL 49 marking read returns the updated read_state and persists: status 405, posted 5, returned None, later 5
+FAIL 50 the read cursor never moves backwards: status 405, posted 5 then 3, got None
+FAIL 51 workspace detail embeds read_state with the same fields: status 200, read_state {}
+FAIL 59 marking read to the head makes unread_count 0, and one new message makes it 1: after marking read 0, after one new message None
+FAIL 60 workspace detail read_state carries real counts, not zeros: read_state null
+RESULT: 11 passed, 6 failed
+SCORE B 34 32
+=== REG
+REGRESSION FAIL roles 2 duplicate username: expected 409, got 000
+REGRESSION NOTE roles the 22 second time budget ran out; this rule and every rule after it were not checked (the app is too slow, or hung)
+REGRESSION FAIL channels 4 duplicate name 409, same name in another workspace 201: got 409 and 0
+REGRESSION FAIL channels 5 workspace detail has workspace, channels, read_state and general: status 0, channels []
+REGRESSION FAIL channels 21 a message posted between pages does not shift page 2: status 200, bodies ['m4', 'm3']
+REGRESSION FAIL channels 25 replies are oldest first and page correctly: all ['r1', 'r2', 'r3'], page1 ['r1', 'r2', 'r3'], page2 []
+REGRESSION FAIL channels 26 search finds matches newest first and hides private channels: owner got ['second zq6af74dd7eb4', 'first zq6af74dd7eb4'], other member got []
+REGRESSION FAIL channels 27 workspace_id limits search to one workspace: workspace 1 results ['ws2 zq6af74dd7eb4', 'second zq6af74dd7eb4', 'first zq6af74dd7eb4'], workspace 2 results ['ws2 zq6af74dd7eb4', 'second zq6af74dd7eb4', 'first zq6af74dd7eb4']
+REGRESSION FAIL channels 29 pin list is newest-pinned first, has the right fields and pages: list [], page1 [], page2 []
+REGRESSION FAIL channels 30 unpin returns {unpinned: true} and removes the pin: status 0, body None, list []
+REGRESSION FAIL channels 31 private channel pin list: outsider 403, member 200: got 0 and 0
+REGRESSION FAIL channels 32 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 33 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 34 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 35 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 36 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 37 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 38 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 39 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 61 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 62 skipped: the check's time budget is used up (earlier rules were slow; each should take about a second)
+REGRESSION FAIL channels 40 @username fills mentions with the user's id: status 0, mentions []
+REGRESSION FAIL channels 41 in-word and email-shaped mentions do not match: statuses 0 and 0, mentions [] and []
+REGRESSION FAIL channels 42 a self-mention is dropped: status 0, mentions []
+REGRESSION FAIL channels 43 mentions are deduplicated: status 0, mentions []
+REGRESSION FAIL channels 44 a user outside the workspace is excluded: status 0, mentions []
+REGRESSION FAIL channels 45 @channel mentions every channel member except the author: status 0, mentions [], expected ['132', '133']
+REGRESSION FAIL channels 46 read state has channel_id, last_read_event_id, unread_count, mention_count: status 0, read_state {}
+REGRESSION FAIL channels 47 unread_count rises by 3 after 3 posts: before 0, after None
+REGRESSION FAIL channels 48 mention_count rises for the mentioned user and not for a self-mention: mentioned user None -> None, self-mentioner None -> None
+REGRESSION FAIL channels 49 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 50 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 51 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 52 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 53 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 54 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 55 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 56 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 57 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 58 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 59 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 60 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 63 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 64 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 65 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL channels 66 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+REGRESSION FAIL roles 73 a WebSocket with a bad token: expected it refused (401) or closed, got no handshake answer within 3.5 s
+REGRESSION FAIL roles 74 a WebSocket with a valid token (?token=): expected it open, got no handshake answer within 3.5 s
+REGRESSION NOTE roles rules 75-76 (a killed node) were not run this time: the other rules used most of the time limit; run the suite again
+REGRESSION: 47 broken
+SCORE REG 47

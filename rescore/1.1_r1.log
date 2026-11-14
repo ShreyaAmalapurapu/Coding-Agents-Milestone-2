@@ -1,0 +1,14 @@
+=== C /spec/features/checks/check_features_1.sh
+RESULT: 13 passed, 0 failed
+=== C /spec/features/checks/check_features_2.sh
+RESULT: 10 passed, 0 failed
+=== C /spec/features/checks/check_features_3.sh
+RESULT: 8 passed, 0 failed
+=== C /spec/features/checks/check_features_4.sh
+FAIL 39 /archive and /unarchive by the owner: 201, message null, channel.is_archived true then false; posts 423 while archived: archive 201 1, post 423, unarchive 201 0, post 201
+RESULT: 10 passed, 1 failed
+=== C /spec/features/checks/check_features_5.sh
+FAIL 55 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+FAIL 56 not reached: the check's 22 second time budget ran out (earlier rules were slow)
+RESULT: 12 passed, 2 failed
+SCORE C 53 3

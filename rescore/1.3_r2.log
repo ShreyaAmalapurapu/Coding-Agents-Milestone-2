@@ -1,0 +1,35 @@
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+RESULT: 9 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+FAIL 12 NICK already in use gets 433, the connection stays open, and a free NICK then registers: first ':irc 433 * ia6af743adbb1 :Nickname in use', then None
+RESULT: 7 passed, 1 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+FAIL 22 error or timeout (TypeError unsupported operand type(s) for +: 'NoneType' and 'int')
+FAIL 23 error or timeout (TypeError unsupported operand type(s) for +: 'NoneType' and 'int')
+FAIL 24 error or timeout (TypeError unsupported operand type(s) for +: 'NoneType' and 'int')
+FAIL 25 error or timeout (TypeError unsupported operand type(s) for +: 'NoneType' and 'int')
+RESULT: 4 passed, 4 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+FAIL 31 check stopped (list index out of range)
+FAIL 32 check stopped (list index out of range)
+FAIL 33 check stopped (list index out of range)
+FAIL 34 check stopped (list index out of range)
+FAIL 35 check stopped (list index out of range)
+FAIL 36 check stopped (list index out of range)
+FAIL 37 check stopped (list index out of range)
+RESULT: 0 passed, 7 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+FAIL 38 browser step failed: Locator.fill: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"message\"]").filter(has_text="edit me 6af743b6860").first.locator("[data-testid=\"edit-message-input\"]"): no element matches)
+RESULT: 7 passed, 1 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+FAIL 46 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"workspace-create-form\"] [type=\"submit\"]"): no element matches)
+FAIL 48 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"new-channel-btn\"]"): no element matches)
+FAIL 49 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"new-channel-btn\"]"): no element matches)
+FAIL 50 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"channel-entry\"][data-channel-name=\"planning\"]"): no element matches)
+FAIL 51 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"workspace-settings-btn\"]"): no element matches)
+FAIL 52 browser step failed: Page.click: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"logout-btn\"]"): no element matches)
+FAIL 53 browser step failed: Locator.bounding_box: Timeout 2500ms exceeded. (waiting for locator("[data-testid=\"channel-list\"]"): no element matches)
+RESULT: 1 passed, 7 failed
+SCORE E 33 20

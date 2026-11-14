@@ -1,0 +1,48 @@
+[2026-11-12 17:16:34] starting run 1.1 repeat 1 (attempt 1)
+[2026-11-12 17:45:02] run 1.1 repeat 1: job 2026-11-12__17-16-37, cost $1.1154
+[2026-11-12 17:45:02] starting run 1.1 repeat 2 (attempt 1)
+[2026-11-12 18:20:17] run 1.1 repeat 2: job 2026-11-12__17-45-04, cost $1.8132
+[2026-11-12 18:20:17] STOPPED for the night after run 1.1 repeat 2; milestone-2-specs/ rebuilt for Run 5.3. Safe to shut down.
+[2026-11-12 20:06:28] run 1.1 repeat 1 already done, skipping
+[2026-11-12 20:06:28] run 1.1 repeat 2 already done, skipping
+[2026-11-12 20:06:28] starting run 1.2 repeat 1 (attempt 1)
+[2026-11-12 20:17:56] run 1.2 repeat 1: job 2026-11-12__20-06-30, cost $0.1526
+[2026-11-12 20:17:56] starting run 1.2 repeat 2 (attempt 1)
+[2026-11-12 20:24:54] run 1.2 repeat 2: job 2026-11-12__20-17-58, cost $0.2073
+[2026-11-12 20:24:55] starting run 1.3 repeat 1 (attempt 1)
+[2026-11-12 20:45:52] run 1.3 repeat 1: job 2026-11-12__20-24-56, cost $1.4414
+[2026-11-12 20:45:52] starting run 1.3 repeat 2 (attempt 1)
+[2026-11-12 21:09:15] run 1.3 repeat 2: job 2026-11-12__20-45-54, cost $1.3672
+[2026-11-12 21:09:16] starting run 2.1 repeat 1 (attempt 1)
+[2026-11-12 21:18:21] run 2.1 repeat 1: job 2026-11-12__21-09-17, cost $0.5499
+[2026-11-12 21:18:22] starting run 2.1 repeat 2 (attempt 1)
+[2026-11-12 21:37:16] run 2.1 repeat 2: job 2026-11-12__21-18-23, cost $1.4527
+[2026-11-12 21:37:16] starting run 2.2 repeat 1 (attempt 1)
+[2026-11-12 21:52:48] run 2.2 repeat 1: job 2026-11-12__21-37-17, cost $0.4186
+[2026-11-12 21:52:48] starting run 2.2 repeat 2 (attempt 1)
+[2026-11-12 22:07:49] run 2.2 repeat 2: job 2026-11-12__21-52-50, cost $0.3431
+[2026-11-12 22:07:50] starting run 2.3 repeat 1 (attempt 1)
+[2026-11-12 22:40:46] run 2.3 repeat 1: job 2026-11-12__22-07-51, cost $2.3840
+[2026-11-12 22:40:46] starting run 2.3 repeat 2 (attempt 1)
+[2026-11-12 23:00:34] run 2.3 repeat 2: job 2026-11-12__22-40-48, cost $0.9910
+[2026-11-12 23:00:34] starting run 3 repeat 1 (attempt 1)
+[2026-11-12 23:26:24] run 3 repeat 1: job 2026-11-12__23-00-35, cost $2.0763
+[2026-11-12 23:26:25] starting run 3 repeat 2 (attempt 1)
+[2026-11-12 23:50:31] run 3 repeat 2: job 2026-11-12__23-26-26, cost $1.8905
+[2026-11-12 23:50:32] starting run 4 repeat 1 (attempt 1)
+[2026-11-13 00:24:11] run 4 repeat 1: job 2026-11-12__23-50-33, cost $2.8724
+[2026-11-13 00:24:11] starting run 4 repeat 2 (attempt 1)
+[2026-11-13 01:00:03] run 4 repeat 2: job 2026-11-13__00-24-12, cost $2.9340
+[2026-11-13 01:00:03] starting run 5.1 repeat 1 (attempt 1)
+[2026-11-13 01:38:40] run 5.1 repeat 1: job 2026-11-13__01-00-05, cost $5.0075
+[2026-11-13 01:38:40] starting run 5.1 repeat 2 (attempt 1)
+[2026-11-13 02:09:07] run 5.1 repeat 2: job 2026-11-13__01-38-42, cost $2.4002
+[2026-11-13 02:09:07] starting run 5.2 repeat 1 (attempt 1)
+[2026-11-13 02:39:53] run 5.2 repeat 1: job 2026-11-13__02-09-08, cost $5.0088
+[2026-11-13 02:39:53] starting run 5.2 repeat 2 (attempt 1)
+[2026-11-13 02:58:54] run 5.2 repeat 2: job 2026-11-13__02-39-55, cost $1.3834
+[2026-11-13 02:58:55] starting run 5.3 repeat 1 (attempt 1)
+[2026-11-13 03:27:47] run 5.3 repeat 1: job 2026-11-13__02-58-56, cost $4.1793
+[2026-11-13 03:27:47] starting run 5.3 repeat 2 (attempt 1)
+[2026-11-13 03:50:23] run 5.3 repeat 2: job 2026-11-13__03-27-49, cost $3.0579
+[2026-11-13 03:50:23] ALL DONE. milestone-2-specs/ rebuilt for Run 5.3. Total cost: $43.05

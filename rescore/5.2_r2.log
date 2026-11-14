@@ -1,0 +1,147 @@
+=== C /spec/features/checks/check_features_1.sh
+FAIL 5 a valid IANA timezone is saved, an invalid one is 400 and changes nothing: valid -> 200, invalid -> 200, stored 'Mars/Phobos'
+FAIL 6 length limits: display_name 1-80, status_text 0-100, status_emoji 0-64, avatar_url 0-2048 (else 400, nothing saved): statuses [200, 200, 200, 200, 200, 200, 200, 200] (expected [200, 400, 200, 400, 400, 400, 200, 400]), stored display_name length 0
+FAIL 7 PATCH /api/users/me without a token 401, a non-string field 400: got 401 and 200
+FAIL 8 PATCH on 8000 sends user.updated with the new user to a socket on 8002, with no channel_id or event_id: frame null
+FAIL 9 POST /api/dms returns 200 {channel_id}, the same id on repeat and in the other direction: statuses 404/404/404, ids None/None/None
+FAIL 10 both DM users can post and read (any node), and the DM has exactly those two members: posts 404/404, list 404 [], members 404 []
+FAIL 11 a third user gets 403 reading or posting in the DM: got 404 and 404
+FAIL 12 DM with an unknown user 404, without user_id 400, without a token 401: got 404, 404, 401
+FAIL 13 subscribing to the DM channel gave no head_event_id
+RESULT: 4 passed, 9 failed
+=== C /spec/features/checks/check_features_2.sh
+FAIL 22 add, duplicate add, remove give exactly reaction.added then reaction.removed with the next event_ids: head 6, kinds ['reaction.added'], ids [7]
+RESULT: 9 passed, 1 failed
+=== C /spec/features/checks/check_features_3.sh
+FAIL 24 upload returns 201 {file} with id, uploader_id, filename, content_type, size, created_at: status 404, file {}
+FAIL 25 GET /api/files/{id} on 8002 returns the same file; unknown id 404; upload without a token 401: got 404 {}, 404, 401
+FAIL 26 download on 8001 returns the exact bytes, the Content-Type, and the filename in Content-Disposition: status 404, 22 bytes (want 22), Content-Type 'application/json', Content-Disposition ''
+FAIL 27 binary bytes (a PNG with zero bytes) round-trip exactly as image/png: upload 404, download 404, 0 of 2061 bytes match, Content-Type 'application/json'
+FAIL 28 a file of exactly 10 MiB is accepted (201), one byte more is 413: 10 MiB -> 0, 10 MiB + 1 -> 0 (no answer: read the body, then answer 413)
+FAIL 29 a multipart body without a `file` part is 400: got 404
+FAIL 30 posting with file_ids attaches the file: message.files holds the FileObj, also in the listing: status 201, files [], listed []
+FAIL 31 file_ids with an already attached file, another user's file, or an unknown id is 400: got [201, 201, 201]
+RESULT: 0 passed, 8 failed
+=== C /spec/features/checks/check_features_4.sh
+FAIL 33 /me with no text is 400: got [201, 201]
+FAIL 34 /shrug appends the shrug emoticon after a space; alone it is just the emoticon: got 201 '/shrug oh well' and 201 '/shrug'
+FAIL 35 /topic sets the topic: 201 with message null and the updated channel; over 250 chars 400: status 201, body {"message": {"id": 13, "channel_id": 8, "author_id": 11, "body": "/topic Sprint planning", "parent_id": null, "created_at": "2026-11-13T17:51:29.786411Z", "edited_at": null, "deleted": 0, "author": {", too long -> 201
+FAIL 36 /invite @user adds a workspace member to the channel: 201, message null, invited_user: status 201, body {"message": {"id": 15, "channel_id": 8, "author_id": 11, "body": "/invite @se6af74e2146", "parent_id": null, "created_at": "2026-11-13T17:51:29.801700Z", "edited_at": null, "deleted": 0, "author": {"i, members ['sa6af74e2146', 'sb6af74e2146', 'so6af74e2146']
+FAIL 37 /invite of an unknown username is 404: got 201
+FAIL 38 /archive by a plain member is 403: got 201
+FAIL 39 /archive and /unarchive by the owner: 201, message null, channel.is_archived true then false; posts 423 while archived: archive 201 None, post 201, unarchive 201 None, post 201
+FAIL 40 an unknown command (/foo, or a bare /) is 400: got [201, 201]
+FAIL 42 side-effect commands store no message: /topic gives only channel.updated, and none appear in the listing: head 17, frames [('message.created', 18)], stored command messages ['/topic Live topic', '/unarchive', '/archive', '/archive', '/invite @nosuch6af74e2146', '/invite @se6af74e2146', '/topic ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt', '/topic Sprint planning']
+RESULT: 2 passed, 9 failed
+=== C /spec/features/checks/check_features_5.sh
+FAIL 43 a member creates a group: 201 {group} with id, handle, name, member_user_ids (no `members`): status 404, group {}
+FAIL 44 GET groups (on 8001) returns 200 {groups} including the new group with its members: status 404, matching []
+FAIL 45 duplicate handle 409; handle with a space, uppercase, empty or 1 char is 400: got [404, 404, 404, 404, 404]
+FAIL 46 a non-member of the workspace gets 403 on POST and GET; no token 401: got [404, 404, 401]
+FAIL 47 the creator PATCHes name and user_ids: 200 {group} with the new member_user_ids: status 404, group null
+FAIL 48 PATCH by another member 403, by the workspace owner 200, unknown handle 404: got 404, 404, 404
+FAIL 49 DELETE by another member 403; by the creator 200 {deleted: true}, again 200 {deleted: true}; then gone from the list: got 404, 404 {'error': 'not found'}, 404 {'error': 'not found'}, still listed False
+FAIL 50 @group-handle mentions group members who are in the channel, minus the author: status 201, mentions []
+FAIL 51 mentions from @group, @username and @channel are deduplicated and never include the author: group+user: 201 ['17']; @channel+group+user: 201 ['15', '17', '18'] (want every channel member but the author, once)
+FAIL 52 a group mention raises a member's mention_count by 1 and never the author's: member 2 -> 2, author 0 -> 0
+FAIL 53 @here mentions channel members with an open WebSocket (any node), not the author, not non-members: status 201, mentions [] (expected only 17)
+RESULT: 3 passed, 11 failed
+SCORE C 18 38
+=== D /spec/cluster/checks/check_cluster_1.sh
+FAIL 1 a Redis server answers PING on 127.0.0.1:6379: no +PONG from 127.0.0.1:6379 (start redis-server from /app/start.sh)
+FAIL 2 Redis runs as its own process, separate from the HTTP nodes: PIDs on 6379 [], PIDs on 8000-8002 [1015, 1016, 1017]
+FAIL 3 a message posted on 8001 reaches sockets on 8000, 8001 and 8002 within 2s, with the message in the frame: per node (event_id, message.body): [(1, None), (1, None), (1, None)]
+FAIL 4 30 concurrent posts across the 3 nodes all return 201 and give 30 consecutive event_ids, no gaps or repeats: statuses [201], 0 frames, ids []..[] (want 2..31)
+RESULT: 1 passed, 4 failed
+=== D /spec/cluster/checks/check_cluster_2.sh
+FAIL 9 a socket on 8002 receives both new messages with the next event_ids: last seen 1, got []
+FAIL 12 the restarted node shows the outage writes, and its new post reaches 8002 with the next event_id: 8001 list 200 ['during-b 6af74e271fe', 'during-a 6af74e271fe'], post 201, frames [] (the post through the restarted 8001 was stored but never reached the socket on 8002 within 3s: the restarted node must publish its events again and other nodes must deliver them)
+RESULT: 5 passed, 2 failed
+=== D /spec/cluster/checks/check_cluster_3.sh
+FAIL 13 not checked: no Redis answering on 127.0.0.1:6379 (Cluster.1 rule 1 first)
+FAIL 14 not checked: no Redis answering on 127.0.0.1:6379 (Cluster.1 rule 1 first)
+FAIL 15 not checked: no Redis answering on 127.0.0.1:6379 (Cluster.1 rule 1 first)
+FAIL 16 not checked: no Redis answering on 127.0.0.1:6379 (Cluster.1 rule 1 first)
+FAIL 17 not checked: no Redis answering on 127.0.0.1:6379 (Cluster.1 rule 1 first)
+FAIL 18 not checked: no Redis answering on 127.0.0.1:6379 (Cluster.1 rule 1 first)
+RESULT: 0 passed, 6 failed
+=== D /spec/cluster/checks/check_cluster_4.sh
+FAIL 19 under concurrent writes from all 3 nodes, at most 1%% of expected message.created frames are missing: 360 of 360 missing (100.0%)
+FAIL 20 median delivery latency is at most 300 ms: median inf ms over 0 deliveries
+FAIL 21 p95 delivery latency is at most 800 ms: p95 inf ms over 0 deliveries
+RESULT: 0 passed, 3 failed
+SCORE D 6 15
+=== E /spec/irc-ui/checks/check_irc_ui_1.sh
+FAIL 4 an edit emits message.updated with the next event_id and the updated message: head 1, frame {}
+FAIL 9 a delete emits one message.deleted with the next event_id (the repeat emits nothing): head 1, frames []
+RESULT: 7 passed, 2 failed
+=== E /spec/irc-ui/checks/check_irc_ui_2.sh
+FAIL 10 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 11 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 12 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 13 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 14 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 15 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 16 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 17 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_3.sh
+FAIL 18 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 19 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 20 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 21 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 22 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 23 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 24 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+FAIL 25 could not connect to 127.0.0.1:6667 (ConnectionRefusedError)
+RESULT: 0 passed, 8 failed
+=== E /spec/irc-ui/checks/check_irc_ui_4.sh
+RESULT: 5 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_5.sh
+RESULT: 7 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_6.sh
+RESULT: 8 passed, 0 failed
+=== E /spec/irc-ui/checks/check_irc_ui_7.sh
+RESULT: 8 passed, 0 failed
+SCORE E 35 18
+=== A /spec/roles/checks/check_roles_1.sh
+RESULT: 21 passed, 0 failed
+=== A /spec/roles/checks/check_roles_2.sh
+RESULT: 23 passed, 0 failed
+=== A /spec/roles/checks/check_roles_3.sh
+RESULT: 26 passed, 0 failed
+=== A /spec/roles/checks/check_roles_4.sh
+FAIL 74 a WebSocket with a valid token: expected it to stay open, but the server closed it within 1.5 s
+RESULT: 5 passed, 1 failed
+SCORE A 75 1
+=== B /spec/channels/checks/check_channels_1.sh
+RESULT: 15 passed, 0 failed
+=== B /spec/channels/checks/check_channels_2.sh
+FAIL 26 search finds matches newest first and hides private channels: owner got ['hidden zq6af74e5fee0', 'second zq6af74e5fee0', 'first zq6af74e5fee0'], other member got []
+FAIL 27 workspace_id limits search to one workspace: workspace 1 results [], workspace 2 results []
+RESULT: 22 passed, 2 failed
+=== B /spec/channels/checks/check_channels_3.sh
+FAIL 35 message.reply with the next event_id: frame null
+FAIL 39 join, topic, leave, archive, unarchive give the five durable kinds with consecutive ids: head 0, kinds [], ids []
+FAIL 61 leaving twice emits exactly one member.left: head 0, kinds [], ids []
+FAIL 62 30 concurrent posts across 3 nodes all succeed with 30 consecutive event_ids: statuses [0, 201], head 0, ids [1, 2, 3, 4, 5, 6]
+RESULT: 6 passed, 4 failed
+=== B /spec/channels/checks/check_channels_4.sh
+FAIL 51 workspace detail embeds read_state with the same fields: status 200, read_state {}
+FAIL 58 the author's own message does not raise their unread_count: before 0, after 1
+FAIL 60 workspace detail read_state carries real counts, not zeros: read_state {}
+RESULT: 14 passed, 3 failed
+SCORE B 57 9
+=== REG
+REGRESSION FAIL channels 26 search finds matches newest first and hides private channels: owner got ['hidden zq6af74e69b56', 'second zq6af74e69b56', 'first zq6af74e69b56'], other member got []
+REGRESSION FAIL channels 27 workspace_id limits search to one workspace: workspace 1 results [], workspace 2 results []
+REGRESSION FAIL channels 35 message.reply with the next event_id: frame null
+REGRESSION FAIL channels 39 join, topic, leave, archive, unarchive give the five durable kinds with consecutive ids: head 0, kinds [], ids []
+REGRESSION FAIL channels 61 leaving twice emits exactly one member.left: head 0, kinds [], ids []
+REGRESSION FAIL channels 62 30 concurrent posts across 3 nodes all succeed with 30 consecutive event_ids: statuses [201], head 0, ids [1, 2, 3, 4, 5, 6]
+REGRESSION FAIL channels 51 workspace detail embeds read_state with the same fields: status 200, read_state {}
+REGRESSION FAIL channels 58 the author's own message does not raise their unread_count: before 0, after 1
+REGRESSION FAIL channels 60 workspace detail read_state carries real counts, not zeros: read_state {}
+REGRESSION FAIL roles 74 a WebSocket with a valid token: expected it to stay open, but the server closed it within 1.5 s
+REGRESSION: 10 broken
+SCORE REG 10
